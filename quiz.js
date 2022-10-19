@@ -1,8 +1,8 @@
 const quizForm = document.querySelector('.quiz-form');
 const submitBtn = document.querySelector('#submit-answers-btn');
-const displayOutput = document.querySelector('#output-quiz');
+const displayOutput = document.querySelector('.output');
 
-const correctAnswers = ['70°', 'right'];
+const correctAnswers = ['70°', 'right', '2'];
 
 submitBtn.addEventListener('click', calcScore);
 

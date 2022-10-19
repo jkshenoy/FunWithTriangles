@@ -1,6 +1,6 @@
 const sideInput = document.querySelectorAll('.side-input');
 const hypoBtn = document.querySelector('#button');
-const outputAns = document.querySelector('#output');
+const outputAns = document.querySelector('.output');
 
 function calcHypotenuse() {
   const addSides = sumOfsquares(
@@ -8,7 +8,7 @@ function calcHypotenuse() {
     Number(sideInput[1].value)
   );
   const lengthOfHypo = Math.sqrt(addSides);
-  outputAns.innerText = 'The length of Hypotenuse is ' + lengthOfHypo;
+  outputAns.innerText = `The length of Hypotenuse is ${lengthOfHypo} units`;
 }
 
 function sumOfsquares(a, b) {

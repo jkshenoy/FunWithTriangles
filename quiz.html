@@ -9,9 +9,18 @@
   </head>
 
   <body>
-    <h1>Triangle knowledge Quiz</h1>
+    <header>
+      <h1>Fun with Triangles</h1>
+      <nav>
+        <a class="active" id="quiz" href="./quiz.html">Quiz</a>
+        <a id="istriangle" href="./istriangle.html">Is Triangle?</a>
+        <a id="hypotenuse" href="./hypotenuse.html">Hypotenuse</a>
+        <a id="area" href="./area.html">Area</a>
+      </nav>
+    </header>
     <form class="quiz-form">
       <div class="question-container">
+        <h2>Each right answer adds 1 mark to your tally. Give it a go!</h2>
         <p>
           1. What is the third angle for the triangle where angle1 = 50° and
           angle2 = 60°?
@@ -26,9 +35,15 @@
         <label><input type="radio" name="q2" value="acute" />acute</label>
         <label><input type="radio" name="q2" value="right" />right</label>
       </div>
+      <div class="question-container">
+        <p>3. How many dimensions does a triangle have ?</p>
+        <label><input type="radio" name="q3" value="1" />1</label>
+        <label><input type="radio" name="q3" value="2" />2</label>
+        <label><input type="radio" name="q3" value="3" />3</label>
+      </div>
     </form>
     <button id="submit-answers-btn">Submit Answers</button>
-    <div id="output-quiz">Score will appear here</div>
+    <div class="output">Score will appear here</div>
     <script src="/quiz.js"></script>
   </body>
 </html>

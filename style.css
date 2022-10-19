@@ -1,1 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #303439;
+  --button-gray: #94a3b8;
+}
+
+body {
+  background-color: #f7fff0;
+  color: var(--primary-color);
+  font-family: 'Quicksand', monospace;
+}
+
+header {
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: teal;
+  height: 200px;
+}
+
+header h1 {
+  margin: auto;
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+header nav {
+  margin: auto;
+  text-align: right;
+}
+
+header a {
+  border: 3px solid var(--primary-color);
+  border-radius: 1rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  padding: 0 10px;
+  text-decoration: none;
+}
+header a.active {
+  background-color: #fafbd5;
+  border: solid;
+  text-decoration: none;
+}
+
+header h1 {
+  margin: auto;
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* font-size: 1.2rem; */
+}
+
+.container h2 {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  font-size: 1.3rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  margin: auto;
+  width: auto;
+  height: 40px;
+}
+
+button {
+  background-color: var(--button-gray);
+  border: 3px solid var(--primary-color);
+  display: block;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin: auto;
+  margin-top: 20px;
+  height: 40px;
+  width: 170px;
+  cursor: pointer;
+}
+
+.output {
+  margin: auto;
+  margin-top: 30px;
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+/* quiz related */
+
+.question-container {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem;
+}

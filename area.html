@@ -5,10 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <div id="area">
+    <header>
+      <h1>Fun with Triangles</h1>
+      <nav>
+        <a id="quiz" href="./quiz.html">Quiz</a>
+        <a id="istriangle" href="./istriangle.html">Is Triangle?</a>
+        <a id="hypotenuse" href="./hypotenuse.html">Hypotenuse</a>
+        <a class="active" id="area" href="./area.html">Area</a>
+      </nav>
+    </header>
+    <div class="container">
       <h1>Calculate the area of a Triangle</h1>
 
       <label>Enter Base</label>
@@ -18,7 +28,7 @@
       <input type="number" class="user-input area1" />
 
       <button id="button" class="area1">Calculate Area</button>
-      <div id="output" class="area1"></div>
+      <div class="output" class="area1">Result will appear here</div>
     </div>
 
     <script src="./area.js"></script>

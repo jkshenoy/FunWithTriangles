@@ -5,34 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fun with Triangles</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1><a class="active">Fun With Triangles</a></h1>
-    <h2 id="h2mainheader">
-      How well do you know the Triangles ? Have fun with them here
-    </h2>
-    <header class="topnav">
+    <header>
+      <h1>Fun with Triangles</h1>
       <nav>
-        <a href="./isTriangle.html">Is Triangle ?</a>
-        <a href="./area.html">Area</a>
-        <a href="./hypotenuse.html">Hypotenuse</a>
-        <a href="./quiz.html">Quiz</a>
+        <a id="quiz" href="./quiz.html">Quiz</a>
+        <a id="istriangle" href="./istriangle.html">Is Triangle?</a>
+        <a class="active" id="hypotenuse" href="/">Hypotenuse</a>
+        <a id="area" href="./area.html">Area</a>
       </nav>
     </header>
-
-    <div id="hypotenuse1">
-      <h1>Calculate the Hypotenuse Value</h1>
-
+      <div class="container">
+      <h2>Calculate the Hypotenuse Value</h2>
       <label>Height of Triangle </label>
       <input type="number" class="side-input hypo1" />
 
       <label>Base of Triangle</label>
       <input type="number" class="side-input hypo1" />
 
-      <button id="button" class="hypo1">Calculate Hypotenuse</button>
-      <div id="output" class="hypo1"></div>
+      <button id="button" class="hypo1">Check</button>
+      <div class="output" class="hypo1">Result will appear here.</div>
     </div>
     <script src="./hypotenuse.js"></script>
-  </body>
+
 </html>

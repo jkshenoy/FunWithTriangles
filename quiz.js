@@ -1,18 +1,37 @@
 const quizForm = document.querySelector('.quiz-form');
-const submitBtn = document.querySelector('#submit-answers-btn');
-const displayOutput = document.querySelector('.output');
 
-const correctAnswers = ['70°', 'right', '2'];
+const displayResult = document.querySelector('.quizresult');
 
-submitBtn.addEventListener('click', calcScore);
+const correctAnswers = [
+  '70°',
+  'right',
+  '2',
+  'equilateral',
+  '2',
+  'no',
+  'polygon',
+];
 
-function calcScore() {
+quizForm.addEventListener('submit', (e) => {
+  e.preventDefault();
   let score = 0,
     ansIndex = 0;
   const formResults = new FormData(quizForm);
   for (let value of formResults.values()) {
-    if (value === correctAnswers[ansIndex]) score++;
+    if (value === correctAnswers[ansIndex]) score += 20;
     ansIndex++;
   }
-  displayOutput.innerText = `Your score is ${score}`;
-}
+  //show the result
+  // displayResult.innerText = `Your score is ${score}`;
+
+  let output = 0;
+  const timer = setInterval(() => {
+    displayResult.style.display = 'block';
+    displayResult.textContent = `You got ${output}% answers right!`;
+    if (output === score) {
+      clearInterval(timer);
+    } else {
+      output++;
+    }
+  }, 10);
+});

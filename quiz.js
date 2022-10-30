@@ -10,6 +10,9 @@ const correctAnswers = [
   '2',
   'no',
   'polygon',
+  'SSA',
+  'Obtuse Scalene',
+  'True',
 ];
 
 quizForm.addEventListener('submit', (e) => {
@@ -18,16 +21,18 @@ quizForm.addEventListener('submit', (e) => {
     ansIndex = 0;
   const formResults = new FormData(quizForm);
   for (let value of formResults.values()) {
-    if (value === correctAnswers[ansIndex]) score += 20;
+    if (value === correctAnswers[ansIndex]) score += 10;
     ansIndex++;
   }
   //show the result
+  window.scrollTo(0, 0);
   // displayResult.innerText = `Your score is ${score}`;
 
   let output = 0;
   const timer = setInterval(() => {
     displayResult.style.display = 'block';
-    displayResult.textContent = `You got ${output}% answers right!`;
+    if (score === 0) displayResult.textContent = `You got nothing right!`;
+    else displayResult.textContent = `You got ${output}% answers right!`;
     if (output === score) {
       clearInterval(timer);
     } else {

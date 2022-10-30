@@ -5,12 +5,14 @@
 }
 
 :root {
-  --primary-color: #303439;
-  --button-gray: #94a3b8;
+  --primary-light: #6efff0;
+  --primary-dark: #0f1d42;
+  --accent-color: #cbdb2a;
+  --button-color: #94a3b8;
 }
 
 body {
-  background-color: #f7fff0;
+  background-color: var(--primary-light);
   color: var(--primary-color);
   font-family: sans-serif;
 }
@@ -18,14 +20,17 @@ body {
 header {
   /* display: flex; */
   /* flex-direction: column; */
-  background-color: teal;
+  background-color: var(--primary-dark);
   height: 200px;
 }
 
 header h1 {
   margin: auto;
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--accent-color);
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
 }
 
 header nav {
@@ -36,20 +41,16 @@ header nav {
 header a {
   border: 3px solid var(--primary-color);
   border-radius: 1rem;
-  color: var(--primary-color);
+  color: aliceblue;
   font-size: 1.5rem;
   padding: 0 10px;
   text-decoration: none;
 }
 header a.active {
-  background-color: #fafbd5;
+  background-color: var(--accent-color);
+  color: black;
   border: solid;
   text-decoration: none;
-}
-
-header h1 {
-  margin: auto;
-  font-size: 3rem;
 }
 
 p {
@@ -59,7 +60,6 @@ p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* font-size: 1.2rem; */
 }
 
 .container h2 {
@@ -78,8 +78,7 @@ input {
 
 button,
 #submitbutton {
-  background-color: var(--button-gray);
-  border: 3px solid var(--primary-color);
+  background-color: var(--button-color);
   display: block;
   border-radius: 5px;
   font-size: 1.3rem;
@@ -110,7 +109,7 @@ button,
 
 .quizresult {
   display: none;
-  color: teal;
+  color: var(--primary-dark);
   margin: auto;
   margin-top: 30px;
   font-size: 2.5rem;
